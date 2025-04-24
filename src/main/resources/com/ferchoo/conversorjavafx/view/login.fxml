@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.ferchoo.conversorjavafx.controller.LoginController">
+
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+
+    <Text text="Conversor de Monedas" styleClass="title-text"/>
+
+    <GridPane>
+        <Label text="Usuario:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Iniciar Sesión" fx:id="loginButton" defaultButton="true"/>
+        <Button text="Registrarse" fx:id="registerButton"/>
+    </HBox>
+
+    <Label fx:id="messageLabel" styleClass="error-message"/>
+</VBox>
